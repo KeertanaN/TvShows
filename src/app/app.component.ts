@@ -9,7 +9,7 @@ import { ShowsService } from './shows/shows.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TV Shows Guide';
+  title = 'TvShows';
 
   currentShow: ICurrentShow;
 

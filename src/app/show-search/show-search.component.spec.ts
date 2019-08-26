@@ -1,16 +1,39 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ShowSearchComponent } from './show-search.component';
+import { ShowSearchComponent } from "./show-search.component";
 
-describe('ShowSearchComponent', () => {
+import {
+  MatButtonModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatCardModule
+} from "@angular/material";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+
+describe("ShowSearchComponent", () => {
   let component: ShowSearchComponent;
   let fixture: ComponentFixture<ShowSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShowSearchComponent ]
-    })
-    .compileComponents();
+      imports: [
+        MatButtonModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCardModule,
+        FormsModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        HttpClientTestingModule
+      ],
+      declarations: [ShowSearchComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +42,7 @@ describe('ShowSearchComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

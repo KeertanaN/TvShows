@@ -3,7 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { ICurrentShow } from '../icurrent-show';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
+export interface IShowsService{
+  getShowData(search: string): Observable<ICurrentShow>;
+}
 
 interface ICurrentShowData{
   show:{
